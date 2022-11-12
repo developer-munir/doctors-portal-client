@@ -12,9 +12,7 @@ const ServiceTerms = () => {
           />
         </div>
         <div className="lg:w-1/2 mt-9 lg:mt-0">
-          <h1
-            className="text-5xl font-bold text-[#3A4256]"
-          >
+          <h1 className="text-5xl font-bold text-[#3A4256]">
             Exceptional Dental Care, on Your Terms
           </h1>
           <p className="py-6">
@@ -22,7 +20,9 @@ const ServiceTerms = () => {
             excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
             a id nisi.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn btn-primary bg-gradient-to-r from-primary to-secondary">
+            Get Started
+          </button>
         </div>
       </div>
     </div>
