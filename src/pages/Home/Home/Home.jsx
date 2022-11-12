@@ -7,6 +7,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { FcCallback } from "react-icons/fc";
 import Services from "../Services/Services";
 import Apoinment from "../Apoinment/Apoinment";
+import Patients from "../PatientsSays/Patients";
 const Home = () => {
   const alerm = (
     <React.Fragment>
@@ -57,6 +58,7 @@ const Home = () => {
           </div>
           <Services></Services>
           <Apoinment></Apoinment>
+          <Patients></Patients>
     </div>
   );
 };
