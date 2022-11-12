@@ -5,6 +5,7 @@ import "../Header/header.css";
 import { BsFillAlarmFill } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { FcCallback } from "react-icons/fc";
+import Services from "../Services/Services";
 const Home = () => {
   const alerm = (
     <React.Fragment>
@@ -36,23 +37,24 @@ const Home = () => {
     const title3 = (
       <React.Fragment>
         <h1>Contact us now</h1>
-        <p>Contact us nowContact us now</p>
+        <p>Contact us now</p>
       </React.Fragment>
     );
   return (
     <div className="mx-[21px]">
       <Header></Header>
-      <div className="grid md:grid-cols-3 gap-6 relative bottom-3 mt-[80px] md:mt-0">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 relative bottom-3 mt-[80px] md:mt-0 text-white">
         <div className="opening-hours">
           <Info icon={alerm} title={title1}></Info>
         </div>
-        <div className="bg-accent rounded-[14px] text-white">
+        <div className="bg-accent rounded-[14px]">
           <Info icon={location} title={title2}></Info>
         </div>
         <div className="contact">
           <Info icon={phone} title={title3}></Info>
         </div>
-      </div>
+          </div>
+          <Services></Services>
     </div>
   );
 };
