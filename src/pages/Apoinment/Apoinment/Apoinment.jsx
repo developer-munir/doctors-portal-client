@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
 import ApoinmentHeader from '../ApoinmentHeader/ApoinmentHeader';
-import { format } from "date-fns";
+import AvailableApoinment from '../AvailableApoinment/AvailableApoinment';
+import BookingModal from '../BookingModal/BookingModal';
 const Apoinment = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const [booking, setBooking] = useState({});
+    // console.log(booking)
     return (
-      <div>
+      <div className="mx-[21px]">
         <ApoinmentHeader
           setSelectedDate={setSelectedDate}
           selectedDate={selectedDate}
         ></ApoinmentHeader>
-        <p className='text-center text-3xl my-3'>You Picked {format(selectedDate, "PPP")}</p>
+        <AvailableApoinment
+          selectedDate={selectedDate}
+          setBooking={setBooking}
+        ></AvailableApoinment>
+        {booking && <BookingModal booking={booking}></BookingModal>}
       </div>
     );
 };

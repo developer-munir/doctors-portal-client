@@ -12,7 +12,7 @@ const ApoinmentHeader = ({selectedDate,setSelectedDate}) => {
       >
         <div className="hero-content flex-col lg:flex-row-reverse md:mt-52 md:mb-72">
           <div className="lg:w-1/2">
-            <img src={chair} className="rounded-lg shadow-2xl w-full" alt="" />
+            <img src={chair} className="rounded-lg shadow-2xl" alt="" />
           </div>
           <div className="lg:w-1/2 mt-16 lg:mt-0">
             <DayPicker
