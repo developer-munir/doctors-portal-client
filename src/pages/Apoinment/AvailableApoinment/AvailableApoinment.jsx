@@ -3,8 +3,12 @@ import React, { useEffect, useState } from 'react';
 import { format } from "date-fns";
 import ApoinmentSlote from '../ApoinmentSlote/ApoinmentSlote';
 
-const AvailableApoinment = ({ selectedDate, setBooking }) => {
+import BookingModal from "../BookingModal/BookingModal";
+
+const AvailableApoinment = ({ selectedDate }) => {
   const [apoinmentSlote, setApoinmentSlote] = useState([]);
+  
+    const [booking, setBooking] = useState({});
   useEffect(() => {
     fetch("services.json")
       .then((res) => res.json())
@@ -25,6 +29,13 @@ const AvailableApoinment = ({ selectedDate, setBooking }) => {
           ></ApoinmentSlote>
         ))}
       </div>
+      {booking && (
+        <BookingModal
+          selectedDate={selectedDate}
+          booking={booking}
+          setBooking={setBooking}
+        ></BookingModal>
+      )}
     </div>
   );
 };

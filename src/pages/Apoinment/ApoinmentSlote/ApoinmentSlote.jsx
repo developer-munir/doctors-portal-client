@@ -12,7 +12,7 @@ const ApoinmentSlote = ({ apoinment, setBooking }) => {
           {slots.length} {slots.length > 1 ? "spaces" : "space"} available
         </p>
         <div className="card-actions justify-center">
-          <label htmlFor="booking-modal" className="btn btn-primary" onClick={()=> setBooking(apoinment)}>
+          <label htmlFor="booking-modal" className="btn btn-primary"  disabled ={slots.length === 0} onClick={()=> setBooking(apoinment)}>
             Book Appointment
           </label>
         </div>
